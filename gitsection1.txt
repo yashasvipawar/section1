@@ -1,0 +1,107 @@
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~
+$ mkdir assign
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~
+$ cd assign
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign
+$ git init
+Initialized empty Git repository in C:/Users/pawar/assign/.git/
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git add .
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git commit -m "readme text file"
+[master (root-commit) 341122c] readme text file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.txt
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git branch html-assign
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git checkout html-assign
+Switched to branch 'html-assign'
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git commit -m "commit text file"
+On branch html-assign
+nothing to commit, working tree clean
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git add doc.html
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git commit -m "commit text file again"
+[html-assign 6bc3d1d] commit text file again
+ 1 file changed, 6 insertions(+)
+ create mode 100644 doc.html
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git checkout master
+Switched to branch 'master'
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git commit -m "commit text file to master"
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$  git add .
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git commit -m "commit text file to master"
+[master 762d6b3] commit text file to master
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git checkout html-assign
+Switched to branch 'html-assign'
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git add .
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git commit -m "commit text file to html-assign"
+[html-assign 29ccf3d] commit text file to html-assign
+ 1 file changed, 3 insertions(+)
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (html-assign)
+$ git checkout master
+Switched to branch 'master'
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git merge html-assign
+Merge made by the 'recursive' strategy.
+ doc.html | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 doc.html
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git branch -d html-assign
+Deleted branch html-assign (was 29ccf3d).
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git config --global user.username yashasvipawar
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git remote add origin https://github.com/yashasvipawar/section1.git
+
+pawar@DESKTOP-O1H73O2 MINGW64 ~/assign (master)
+$ git push origin master
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (14/14), 1.39 KiB | 357.00 KiB/s, done.
+Total 14 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/yashasvipawar/section1.git
+ * [new branch]      master -> master
